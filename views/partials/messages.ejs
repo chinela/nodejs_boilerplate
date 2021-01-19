@@ -1,0 +1,23 @@
+<% if (typeof errors != 'undefined') { %>
+    <% errors.forEach(error => { %>
+        <li><%= error.message %> </li>
+    <% }) %>
+<% } %>
+
+<% if (success_msg != '') { %>
+    <div class="alert alert-success">
+        <strong><%= success_msg %> </strong>
+    </div>
+<% } %>
+
+<% if (error_msg != '') { %>
+    <div class="alert alert-danger">
+        <strong><%= error_msg %> </strong>
+    </div>
+<% } %>
+
+<% if (error != '') { %>
+    <div class="alert alert-danger">
+        <strong><%= error %> </strong>
+    </div>
+<% } %>
